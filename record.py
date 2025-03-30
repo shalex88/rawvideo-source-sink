@@ -6,7 +6,7 @@ def main():
     Gst.init(None)
 
     pipeline = Gst.parse_launch(
-        "videotestsrc num-buffers=500 ! video/x-raw,format=UYVY,width=640,height=480,framerate=25/1 ! filesink location=output.raw"
+        "videotestsrc num-buffers=200 ! video/x-raw,format=UYVY,width=640,height=480,framerate=25/1 ! filesink location=output.raw"
     )
 
     pipeline.set_state(Gst.State.PLAYING)
